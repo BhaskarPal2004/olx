@@ -1,0 +1,84 @@
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS C:\Users\bhask\OneDrive\Desktop\ssh key> ssh-keygen -t rsa -b 4096 -c "bhaskar@itobuz.com"
+Too many arguments.
+usage: ssh-keygen [-q] [-a rounds] [-b bits] [-C comment] [-f output_keyfile]
+                  [-m format] [-N new_passphrase] [-O option]
+                  [-t dsa | ecdsa | ecdsa-sk | ed25519 | ed25519-sk | rsa]
+                  [-w provider] [-Z cipher]
+       ssh-keygen -p [-a rounds] [-f keyfile] [-m format] [-N new_passphrase]
+                   [-P old_passphrase] [-Z cipher]
+       ssh-keygen -i [-f input_keyfile] [-m key_format]
+       ssh-keygen -e [-f input_keyfile] [-m key_format]
+       ssh-keygen -y [-f input_keyfile]
+       ssh-keygen -c [-a rounds] [-C comment] [-f keyfile] [-P passphrase]
+       ssh-keygen -l [-v] [-E fingerprint_hash] [-f input_keyfile]
+       ssh-keygen -B [-f input_keyfile]
+       ssh-keygen -D pkcs11
+       ssh-keygen -F hostname [-lv] [-f known_hosts_file]
+       ssh-keygen -H [-f known_hosts_file]
+       ssh-keygen -K [-a rounds] [-w provider]
+       ssh-keygen -R hostname [-f known_hosts_file]
+       ssh-keygen -r hostname [-g] [-f input_keyfile]
+       ssh-keygen -M generate [-O option] output_file
+       ssh-keygen -M screen [-f input_file] [-O option] output_file
+       ssh-keygen -I certificate_identity -s ca_key [-hU] [-D pkcs11_provider]
+                  [-n principals] [-O option] [-V validity_interval]
+                  [-z serial_number] file ...
+       ssh-keygen -L [-f input_keyfile]
+       ssh-keygen -A [-a rounds] [-f prefix_path]
+       ssh-keygen -k -f krl_file [-u] [-s ca_public] [-z version_number]
+                  file ...
+       ssh-keygen -Q [-l] -f krl_file [file ...]
+       ssh-keygen -Y find-principals -s signature_file -f allowed_signers_file
+       ssh-keygen -Y match-principals -I signer_identity -f allowed_signers_file
+       ssh-keygen -Y check-novalidate -n namespace -s signature_file
+       ssh-keygen -Y sign -f key_file -n namespace file [-O option] ...
+       ssh-keygen -Y verify -f allowed_signers_file -I signer_identity
+                  -n namespace -s signature_file [-r krl_file] [-O option]
+PS C:\Users\bhask\OneDrive\Desktop\ssh key> ssh-keygen -t rsa -b 4096 -C "bhaskar@itobuz.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (C:\Users\bhask/.ssh/id_rsa):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in C:\Users\bhask/.ssh/id_rsa
+Your public key has been saved in C:\Users\bhask/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:qAcHihVfp/cSsI2zhFaDOg5z3EUx5NIHaZrae7aKzqE bhaskar@itobuz.com
+The key's randomart image is:
++---[RSA 4096]----+
+|  .  +@o.        |
+|   o.*+@         |
+| ..o*=O =        |
+|oo=o++ * o       |
+|.=.+. + S .      |
+|  o .+   .       |
+|  . ...          |
+| o o..o          |
+|E.+ .+..         |
++----[SHA256]-----+
+PS C:\Users\bhask\OneDrive\Desktop\ssh key> type %USERPROFILE% \.ssh\id_rsa.pub
+Get-Content : A positional parameter cannot be found that accepts argument '\.ssh\id_rsa.pub'.
+At line:1 char:1
++ type %USERPROFILE% \.ssh\id_rsa.pub
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Get-Content], ParameterBindingException
+    + FullyQualifiedErrorId : PositionalParameterNotFound,Microsoft.PowerShell.Commands.GetContentCommand
+
+PS C:\Users\bhask\OneDrive\Desktop\ssh key> type %USERPROFILE%\.ssh\id_rsa.pub
+type : Cannot find path 'C:\Users\bhask\OneDrive\Desktop\ssh key\%USERPROFILE%\.ssh\id_rsa.pub' because it does not
+exist.
+At line:1 char:1
++ type %USERPROFILE%\.ssh\id_rsa.pub
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\bhask\....ssh\id_rsa.pub:String) [Get-Content], ItemNotFoundEx
+   ception
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.GetContentCommand
+
+PS C:\Users\bhask\OneDrive\Desktop\ssh key> type "$env:USERPROFILE\.ssh\id_rsa.pub"
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCxWXzVh2JFuA6hs0OH2z6QDG0bkQ80BlmT0/4OwBIrof5Je7DSy0OA8qt3knWwYhMMsYV6jpp6Wm210LjCk1dPTaJx/p2plVX1TKB4+5bZAkREzCNhIF0rEOuy/r82ODl3m+N397VK+Aw6JY4NNZI99LSQAGma+eux5rckSL6OR5kZ8zej3iPSnw6hy0e9F1ERj2rIWLj5mrJDeXdcJM4dIssRF/XhncF8TBg40awm9CoVouXYNfljeUww981XaUrYxfu65DRVYm7DzLxV0UL7Xuex4rxBclzxmSPWSB1Sv7IwNtYKZ3BuKFGiWB4FSCuhwDa6n1q/7mdHKjugs7xRcoQkCwPWwj+2355+OrhiaDOc1veUIVQrUbXaCa71QdRlgZbuVSS1U8eg4Ptw2tBCpX6yvIU2EuxnlkwyIceYfeMmmFX84b27/AgWzf+qqaAv3+WggmDXOo/NSZjIVW5C/w0SNL8QvwYensLvSyt42o6y1NrJjLlRoeiKF1sVX7AmedZ/Mu6tDfrZR6x8WSb9H+3mDYjuUQYwebp2dibVZpp/E0KkQVKQcSdzFB5dWjF0MyYtHhOlyBSGAJ5iBzx2WlS3YRPTEBPsGOxLvSiLTmYB1pF1mY2G5u00zaniTh2Ael01kwuTEc6QJNp6CCtd/2khf2DE1Wy0UL8Ru5bfww== bhaskar@itobuz.com
+PS C:\Users\bhask\OneDrive\Desktop\ssh key> Get-Content "$env:USERPROFILE\.ssh\id_rsa.pub"
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCxWXzVh2JFuA6hs0OH2z6QDG0bkQ80BlmT0/4OwBIrof5Je7DSy0OA8qt3knWwYhMMsYV6jpp6Wm210LjCk1dPTaJx/p2plVX1TKB4+5bZAkREzCNhIF0rEOuy/r82ODl3m+N397VK+Aw6JY4NNZI99LSQAGma+eux5rckSL6OR5kZ8zej3iPSnw6hy0e9F1ERj2rIWLj5mrJDeXdcJM4dIssRF/XhncF8TBg40awm9CoVouXYNfljeUww981XaUrYxfu65DRVYm7DzLxV0UL7Xuex4rxBclzxmSPWSB1Sv7IwNtYKZ3BuKFGiWB4FSCuhwDa6n1q/7mdHKjugs7xRcoQkCwPWwj+2355+OrhiaDOc1veUIVQrUbXaCa71QdRlgZbuVSS1U8eg4Ptw2tBCpX6yvIU2EuxnlkwyIceYfeMmmFX84b27/AgWzf+qqaAv3+WggmDXOo/NSZjIVW5C/w0SNL8QvwYensLvSyt42o6y1NrJjLlRoeiKF1sVX7AmedZ/Mu6tDfrZR6x8WSb9H+3mDYjuUQYwebp2dibVZpp/E0KkQVKQcSdzFB5dWjF0MyYtHhOlyBSGAJ5iBzx2WlS3YRPTEBPsGOxLvSiLTmYB1pF1mY2G5u00zaniTh2Ael01kwuTEc6QJNp6CCtd/2khf2DE1Wy0UL8Ru5bfww== bhaskar@itobuz.com
+PS C:\Users\bhask\OneDrive\Desktop\ssh key>
