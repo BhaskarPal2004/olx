@@ -1,0 +1,13 @@
+export const BASE_URL = import.meta.env.VITE_BASE_URL
+export const USER_API_ENDPOINT = import.meta.env.VITE_BASE_URL + import.meta.env.VITE_USER_ENDPOINT
+export const AUTH_API_ENDPOINT = import.meta.env.VITE_BASE_URL + import.meta.env.VITE_AUTH_ENDPOINT
+export const SELLER_API_ENDPOINT = import.meta.env.VITE_BASE_URL + import.meta.env.VITE_SELLER_ENDPOINT
+export const BUYER_API_ENDPOINT = import.meta.env.VITE_BASE_URL + import.meta.env.VITE_BUYER_ENDPOINT
+export const AD_API_ENDPOINT = import.meta.env.VITE_BASE_URL + import.meta.env.VITE_AD_ENDPOINT
+export const REVIEW_API_ENDPOINT = import.meta.env.VITE_BASE_URL + import.meta.env.VITE_REVIEW_ENDPOINT
+export const SUBSCRIPTION_API_ENDPOINT = import.meta.env.VITE_BASE_URL + import.meta.env.VITE_SUBSCRIPTION_ENDPOINT
+export const ORDER_API_ENDPOINT = import.meta.env.VITE_BASE_URL + import.meta.env.VITE_ORDER_ENDPOINT
+export const OTP_API_ENDPOINT = import.meta.env.VITE_BASE_URL + import.meta.env.VITE_OTP_ENDPOINT
+export const CHAT_API_ENDPOINT = import.meta.env.VITE_BASE_URL + import.meta.env.VITE_CHAT_ENDPOINT
+export const PAYMENT_API_ENDPOINT = import.meta.env.VITE_BASE_URL + import.meta.env.VITE_PAYMENT_ENDPOINT
+export const FOLLOW_API_ENDPOINT = import.meta.env.VITE_BASE_URL + import.meta.env.VITE_FOLLOW_ENDPOINT
